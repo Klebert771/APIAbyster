@@ -7,21 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Controllers\**" />
-    <Compile Remove="dto\**" />
-    <Compile Remove="Models\**" />
-    <Content Remove="Controllers\**" />
-    <Content Remove="dto\**" />
-    <Content Remove="Models\**" />
-    <EmbeddedResource Remove="Controllers\**" />
-    <EmbeddedResource Remove="dto\**" />
-    <EmbeddedResource Remove="Models\**" />
-    <None Remove="Controllers\**" />
-    <None Remove="dto\**" />
-    <None Remove="Models\**" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.3" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.3" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.3">
