@@ -122,7 +122,7 @@ namespace APIAbyster.Controllers
 
                 return new JsonResult(new { statusCode = Ok(), message = "opération ajouter avec succès" });
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 return new JsonResult(new { statusCode = BadRequest() });
             }
