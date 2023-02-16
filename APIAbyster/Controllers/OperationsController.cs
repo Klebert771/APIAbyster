@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using APIAbyster.Models;
+using APIAbyster.dto;
 
 namespace APIAbyster.Controllers
 {
@@ -99,6 +100,57 @@ namespace APIAbyster.Controllers
             await _context.SaveChangesAsync();
 
             return NoContent();
+        }
+
+        [HttpPost]
+        [Route("AddOperation")]
+        public async Task<ActionResult<Operation>> AddOperation(OperationDto operationDto)
+        {
+            try
+            {
+
+                Operation operation = new Operation();
+                operation.IdCategorie = operationDto.IdCategorie;
+                operation.IdUser = operationDto.IdUser;
+                operation.LibelleOperation = operationDto.LibelleOperation;
+                operation.MontantOperation = operationDto.MontantOperation;
+                operation.DateOperation = DateTime.Now;
+                operation.IdCategorie = operationDto.IdCategorie;
+
+                _context.Operations.Add(operation);
+                await _context.SaveChangesAsync();
+
+                return new JsonResult(new { statusCode = Ok(), message = "opération ajouter avec succès" });
+            }
+            catch (Exception e)
+            {
+                return new JsonResult(new { statusCode = BadRequest() });
+            }
+        }
+
+        // GET: api/Operations/5
+        [HttpGet]
+        [Route("listOperationUser")]
+        public async Task<ActionResult<IEnumerable<Operation>>> listOperationUser(decimal idUser)
+        {
+
+            return await _context.Operations.Where(p => p.IdUser == idUser).ToListAsync();
+        }
+        // Get : Liste de tous les operations effectuer
+        [HttpGet]
+        [Route("listOperations")]
+        public async Task<ActionResult<IEnumerable<Operation>>> listOperations()
+        {
+            return await _context.Operations.ToListAsync();
+        }
+
+        // Get : Liste des operations effectuer par Categorie
+        [HttpGet]
+        [Route("listOperationCategorie")]
+        public async Task<ActionResult<IEnumerable<Operation>>> listOperationCategorie(decimal idCategorie)
+        {
+
+            return await _context.Operations.Where(p => p.IdCategorie == idCategorie).ToListAsync();
         }
 
         private bool OperationExists(decimal id)
