@@ -44,36 +44,6 @@ namespace APIAbyster.Controllers
 
         }
 
-        // PUT: api/Categories/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        /*  [HttpPut("{id}")]
-          public async Task<IActionResult> PutCategorie(decimal id, Categorie categorie)
-          {
-              if (id != categorie.IdCategorie)
-              {
-                  return BadRequest();
-              }
-
-              _context.Entry(categorie).State = EntityState.Modified;
-
-              try
-              {
-                  await _context.SaveChangesAsync();
-              }
-              catch (DbUpdateConcurrencyException)
-              {
-                  if (!CategorieExists(id))
-                  {
-                      return NotFound();
-                  }
-                  else
-                  {
-                      throw;
-                  }
-              }
-
-              return NoContent();
-          }*/
 
         // POST: api/Categories
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
