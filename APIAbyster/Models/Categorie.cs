@@ -14,4 +14,5 @@ public partial class Categorie
     public int? ArchivedCategorie { get; set; }
 
     public virtual ICollection<Operation> Operations { get; } = new List<Operation>();
+
 }

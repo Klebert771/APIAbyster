@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32922.545
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APIAbyster", "APIAbyster\APIAbyster.csproj", "{F5C4D740-E48B-4F64-B5E9-B112B7BABFCB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "APIAbyster", "APIAbyster\APIAbyster.csproj", "{F5C4D740-E48B-4F64-B5E9-B112B7BABFCB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjetTest", "ProjetTest\ProjetTest.csproj", "{0348F00F-B0AC-4EBC-B4E5-A078D2A92E3C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{F5C4D740-E48B-4F64-B5E9-B112B7BABFCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F5C4D740-E48B-4F64-B5E9-B112B7BABFCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F5C4D740-E48B-4F64-B5E9-B112B7BABFCB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0348F00F-B0AC-4EBC-B4E5-A078D2A92E3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0348F00F-B0AC-4EBC-B4E5-A078D2A92E3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0348F00F-B0AC-4EBC-B4E5-A078D2A92E3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0348F00F-B0AC-4EBC-B4E5-A078D2A92E3C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

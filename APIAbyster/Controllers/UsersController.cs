@@ -32,7 +32,7 @@ namespace WebAPIBudget.Controllers
         // GET: api/Users/5
         [HttpGet]
         [Route("GetUser")]
-        public async Task<ActionResult<Categorie>> GetUser(decimal id)
+        public async Task<ActionResult<User>> GetUser(decimal id)
         {
             var user = _context.Users.Where(p => p.ArchivedUser == 1 && p.IdUser == id).FirstOrDefault();
 
@@ -79,7 +79,7 @@ namespace WebAPIBudget.Controllers
 
         [HttpPost]
         [Route("AddUser")]
-        public async Task<ActionResult<User>> AddUser(userDto userDto)
+        public async Task<ActionResult<User>> AddUser([FromBody] userDto userDto)
         {
             try
             {

@@ -51,10 +51,12 @@ namespace APIAbyster.Controllers
         [Route("AddCategories")]
         public async Task<ActionResult<Categorie>> AddCategories(CategorieDto categorieDto)
         {
-            Categorie categorie = new Categorie();
-            categorie.LibelleCategorie = categorieDto.LibelleCategorie;
-            categorie.ArchivedCategorie = 1;
-            categorie.CreateCategorie=DateTime.Now;
+            Categorie categorie = new()
+            {
+                LibelleCategorie = categorieDto.LibelleCategorie,
+                ArchivedCategorie = 1,
+                CreateCategorie = DateTime.Now
+            };
             _context.Categories.Add(categorie);
             await _context.SaveChangesAsync();
 
